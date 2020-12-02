@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Rancher CLI Action
-        uses: roulianinc/Rancher-CLI@v1.0.3
+        uses: roulianinc/Rancher-CLI@v1.0.8
         with:
           command: kubectl get pods -n warlock --insecure-skip-tls-verify
           token: ${{ secrets.RANCHER_TOKEN }}
