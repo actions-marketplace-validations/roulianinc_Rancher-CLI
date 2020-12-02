@@ -9,7 +9,7 @@ jobs:
       - name: Rancher CLI Action
         uses: roulianinc/Rancher-CLI@v1.0
         with:
-          args: '"get pods -n warlock"'
+          args: '"kubectl get pods -n warlock"'
           token: ${{ secrets.RANCHER_TOKEN }}
           context: ${{ secrets.RANCHER_CONTEXT }}
           url: ${{ secrets.RANCHER_URL }}
