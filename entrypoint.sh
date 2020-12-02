@@ -5,8 +5,4 @@ context="$INPUT_CONTEXT"
 url="$INPUT_URL"
 command="$INPUT_COMMAND"
 
-echo "running the following commands:"
-echo rancher login --token $token $url --context $context
-echo rancher $command
-
-rancher login --token $token $url --context $context && rancher $command
+rancher login --context $context --token $token $url  && rancher $command
