@@ -1,4 +1,4 @@
-name: Rancher CLI
+name: Rancher CLI for Github Actions
 description: Use the Rancher CLI in github actions
 author: dwene
 branding:
