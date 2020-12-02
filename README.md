@@ -14,10 +14,10 @@ jobs:
   rancher_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Rancher Action
-        uses: colbyhill21/Rancher-Action@1.1
+      - name: Rancher CLI Action
+        uses: roulianinc/Rancher-CLI@v1.0.2
         with:
-          args: '"get pods"'
+          command: kubectl get pods -n warlock --insecure-skip-tls-verify
           token: ${{ secrets.RANCHER_TOKEN }}
           context: ${{ secrets.RANCHER_CONTEXT }}
           url: ${{ secrets.RANCHER_URL }}
@@ -28,7 +28,7 @@ jobs:
 - `token`: Rancher Token for logging in.
 - `context`: Context of the project to access. (AKA Project ID)
 - `url`: URL of the Rancher instance.
-- `args`: Command you want to run.
+- `command`: Command you want to run.
 
 ## License
 
