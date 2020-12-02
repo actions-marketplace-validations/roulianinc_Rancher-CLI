@@ -18,5 +18,4 @@ inputs:
     description: Command you want to run.
     required: true
 runs:
-  using: docker
-  image: Dockerfile.action
+  using: docker://glacier3/rancher-cli:latest
