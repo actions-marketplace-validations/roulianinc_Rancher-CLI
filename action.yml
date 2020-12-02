@@ -19,4 +19,4 @@ inputs:
     required: true
 runs:
   using: docker
-  image: glacier3/rancher-cli:latest
+  image: docker://glacier3/rancher-cli:latest
